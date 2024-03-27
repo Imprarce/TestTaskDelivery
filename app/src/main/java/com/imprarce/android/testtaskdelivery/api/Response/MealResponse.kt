@@ -1,4 +1,4 @@
-package com.imprarce.android.testtaskdelivery.api
+package com.imprarce.android.testtaskdelivery.api.Response
 
 import com.google.gson.annotations.SerializedName
 import com.imprarce.android.testtaskdelivery.model.MealItem

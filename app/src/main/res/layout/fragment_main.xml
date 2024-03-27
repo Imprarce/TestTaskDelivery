@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,14 +10,13 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="350dp"
+        android:orientation="vertical">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <androidx.appcompat.widget.Toolbar
@@ -30,7 +29,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
                 android:minHeight="?attr/actionBarSize">
 
                 <Spinner
@@ -49,21 +48,22 @@
                     android:layout_gravity="end|center_vertical"
                     android:layout_margin="@dimen/value_24_dp"
                     android:src="@drawable/qr_image"
-                    app:layout_constraintBottom_toTopOf="@+id/recycler_view_stocks"
+                    app:layout_constraintBottom_toTopOf="@+id/recycler_view_banner"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_view_stocks"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:id="@+id/recycler_view_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/value_0_dp"
                     android:layout_marginTop="@dimen/value_24_dp"
                     android:padding="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/city_spinner" />
+                    app:layout_constraintTop_toBottomOf="@id/city_spinner"
+                    tools:listitem="@layout/item_banner_recycler_view" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -71,11 +71,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?attr/actionBarSize"
-                android:paddingTop="@dimen/value_48_dp"
+                android:layout_gravity="bottom"
                 android:scrollbars="none"
                 app:layout_collapseMode="pin">
 
                 <LinearLayout
+                    android:id="@+id/linear_layout_buttons"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -137,19 +138,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/value_24_dp"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav_view"
-        app:layout_constraintTop_toBottomOf="@+id/appbar" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"
+        tools:listitem="@layout/item_meals_recycler_view" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@drawable/bottom_nav_item_background"
+        android:background="@color/white"
         app:itemIconTint="@color/bottom_nav_icon_colors"
         app:itemTextColor="@color/bottom_nav_text_color"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

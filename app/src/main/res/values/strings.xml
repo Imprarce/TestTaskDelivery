@@ -13,4 +13,6 @@
     <string name="menu">Меню</string>
     <string name="profile">Профиль</string>
     <string name="basket">Корзина</string>
+    <string name="plug">Ошибка Загрузки</string>
+    <string name="_345">от 345 р</string>
 </resources>
