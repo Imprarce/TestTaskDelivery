@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainFragment">
+    tools:context=".presentation.view.fragment.MainFragment">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -55,10 +55,9 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_view_banner"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/value_0_dp"
                     android:layout_marginTop="@dimen/value_24_dp"
-                    android:padding="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -75,55 +74,16 @@
                 android:scrollbars="none"
                 app:layout_collapseMode="pin">
 
-                <LinearLayout
-                    android:id="@+id/linear_layout_buttons"
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group_categories"
+                    android:paddingStart="@dimen/value_16_dp"
+                    android:paddingEnd="@dimen/value_16_dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    app:singleSelection="true"
                     app:layout_collapseMode="pin">
-
-                    <Button
-                        android:id="@+id/button_category1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Категория 1" />
-
-                    <Button
-                        android:id="@+id/button_category2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="Категория 2" />
-
-                    <Button
-                        android:id="@+id/button_category3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="Категория 3" />
-
-                    <Button
-                        android:id="@+id/button_category4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="Категория 4" />
-
-                    <Button
-                        android:id="@+id/button_category5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="Категория 5" />
-
-                    <Button
-                        android:id="@+id/button_category6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:text="Категория 6" />
-
-                </LinearLayout>
+                </com.google.android.material.chip.ChipGroup>
 
             </HorizontalScrollView>
 
@@ -138,6 +98,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/value_24_dp"
+        android:layout_marginBottom="@dimen/value_24_dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintTop_toBottomOf="@+id/appbar"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav_view"

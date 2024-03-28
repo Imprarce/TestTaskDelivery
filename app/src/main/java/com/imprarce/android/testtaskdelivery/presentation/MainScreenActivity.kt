@@ -1,8 +1,9 @@
-package com.imprarce.android.testtaskdelivery
+package com.imprarce.android.testtaskdelivery.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Spinner
+import com.imprarce.android.testtaskdelivery.R
+import com.imprarce.android.testtaskdelivery.presentation.view.fragment.MainFragment
 
 class MainScreenActivity : AppCompatActivity() {
 

@@ -1,15 +1,15 @@
-package com.imprarce.android.testtaskdelivery.api
+package com.imprarce.android.testtaskdelivery.data.api
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.imprarce.android.testtaskdelivery.api.Response.BannerResponse
-import com.imprarce.android.testtaskdelivery.api.Response.CategoryResponse
-import com.imprarce.android.testtaskdelivery.api.Response.MealResponse
-import com.imprarce.android.testtaskdelivery.api.Response.PhotosForBannerResponse
-import com.imprarce.android.testtaskdelivery.model.BannerItem
-import com.imprarce.android.testtaskdelivery.model.CategoryItem
-import com.imprarce.android.testtaskdelivery.model.MealItem
+import com.imprarce.android.testtaskdelivery.data.api.response.BannerResponse
+import com.imprarce.android.testtaskdelivery.data.api.response.CategoryResponse
+import com.imprarce.android.testtaskdelivery.data.api.response.MealResponse
+import com.imprarce.android.testtaskdelivery.data.api.response.PhotosForBannerResponse
+import com.imprarce.android.testtaskdelivery.data.model.BannerItem
+import com.imprarce.android.testtaskdelivery.data.model.CategoryItem
+import com.imprarce.android.testtaskdelivery.data.model.MealItem
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 

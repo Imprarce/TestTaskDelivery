@@ -1,4 +1,4 @@
-package com.imprarce.android.testtaskdelivery.model
+package com.imprarce.android.testtaskdelivery.data.model
 
 import com.google.gson.annotations.SerializedName
 
@@ -6,6 +6,7 @@ data class MealItem(
     @SerializedName("strMeal") var title: String = "",
     @SerializedName("idMeal") var id: String = "",
     @SerializedName("strMealThumb") var url : String = "",
+    @SerializedName("strCategory") var category : String = "",
     @SerializedName("strIngredient1") var ingredient1: String = "",
     @SerializedName("strIngredient2") var ingredient2: String = "",
     @SerializedName("strIngredient3") var ingredient3: String = "",
@@ -26,8 +27,8 @@ data class MealItem(
     @SerializedName("strIngredient18") var ingredient18: String = "",
     @SerializedName("strIngredient19") var ingredient19: String = "",
     @SerializedName("strIngredient20") var ingredient20: String = "",
-) {
     var ingredients: String = ""
+) {
 
     fun getAllIngredients(): String {
         val ingredientsList = mutableListOf<String>()

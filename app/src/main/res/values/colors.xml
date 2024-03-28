@@ -11,4 +11,5 @@
     <color name="light_red_for_button_category">#FD3A69</color>
     <color name="gray_for_icon">#263238</color>
     <color name="selected_icon">#FD3A69</color>
+    <color name="selected_category_background">#33FD3A69</color>
 </resources>

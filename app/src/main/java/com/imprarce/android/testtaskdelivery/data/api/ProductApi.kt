@@ -1,8 +1,8 @@
-package com.imprarce.android.testtaskdelivery.api
+package com.imprarce.android.testtaskdelivery.data.api
 
-import com.imprarce.android.testtaskdelivery.api.Response.CategoryResponse
-import com.imprarce.android.testtaskdelivery.api.Response.MealResponse
-import com.imprarce.android.testtaskdelivery.api.Response.PhotosForBannerResponse
+import com.imprarce.android.testtaskdelivery.data.api.response.CategoryResponse
+import com.imprarce.android.testtaskdelivery.data.api.response.MealResponse
+import com.imprarce.android.testtaskdelivery.data.api.response.PhotosForBannerResponse
 import retrofit2.Call
 import retrofit2.http.GET
 

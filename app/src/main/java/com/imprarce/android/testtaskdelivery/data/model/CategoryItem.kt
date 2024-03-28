@@ -1,4 +1,4 @@
-package com.imprarce.android.testtaskdelivery.model
+package com.imprarce.android.testtaskdelivery.data.model
 
 import com.google.gson.annotations.SerializedName
 
